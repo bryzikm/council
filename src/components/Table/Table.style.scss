@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .table {
   text-align: center;
@@ -8,7 +8,7 @@
 
   &__header {
     border: 1px solid $middle-grey;
-    padding: 20px 8px 20px 8px;
+    padding: 20px 8px;
     text-align: center;
     background-color: $dark-green;
     color: $white;
@@ -26,7 +26,7 @@
 
   &__row-element {
     border: 1px solid $middle-grey;
-    padding: 14px 8px 14px 8px;
+    padding: 14px 8px;
   }
 
   .element-with-icon-wrapper {
@@ -47,7 +47,7 @@
 
   &__row-element-trash-icon {
     opacity: 0;
-    padding: 0 3px 0 3px;
+    padding: 0 3px;
   }
 
   &__row-element-trash-icon:hover {

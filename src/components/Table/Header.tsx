@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import React, { memo } from 'react';
 
-import { IHeaderProps } from "./Table.types";
+import { IHeaderProps } from './Table.types';
 
 const Header = (props: IHeaderProps) => {
   const {
@@ -10,11 +10,13 @@ const Header = (props: IHeaderProps) => {
   } = props;
 
   const renderHeader = () => {
-    if (data.length === 0) return null;
+    if (data.length === 0) {
+      return null;
+    }
 
     const header = Object.keys(data[0]);
-    return header.map((key: any, index: any) => {
-      if (key === "id") {
+    return header.map((key: string, index: number) => {
+      if (key === 'id') {
         return null;
       }
 
@@ -36,9 +38,11 @@ const Header = (props: IHeaderProps) => {
   };
 
   return (
-    <tr className="table__row">
-      {renderHeader()}
-    </tr>
+    <thead>
+      <tr className="table__row">
+        {renderHeader()}
+      </tr>
+    </thead>
   )
 };
 

@@ -6,20 +6,19 @@ export interface IPropsData {
   city: string;
 }
 
-
 export interface IProps {
   data: Array<IPropsData>;
 }
 
 export interface IHeaderProps {
   data: Array<IPropsData>;
-  onClickHandle: (e: any) => void;
-  sortedBy: string | null;
+  onClickHandle: (e: IEvent) => void;
+  sortedBy: string;
 }
 
 export interface IRowProps {
   data: Array<IPropsData>;
-  onClickHandler: (e: any) => void;
+  onClickHandler: (e: IEvent) => void;
 }
 
 export interface ITargetId {

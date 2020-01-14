@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import React, { memo } from 'react';
 
-import { IRowProps } from "./Table.types";
+import { IPropsData, IRowProps } from './Table.types';
 
 const Rows = (props: IRowProps) => {
   const {
@@ -9,9 +9,11 @@ const Rows = (props: IRowProps) => {
   } = props;
 
   const renderItem = () => {
-    if (data.length === 0) return null;
+    if (data.length === 0) {
+      return null;
+    }
 
-    return data.map((item: any) => {
+    return data.map((item: IPropsData) => {
       const {
         id,
         name,
@@ -37,9 +39,9 @@ const Rows = (props: IRowProps) => {
   };
 
   return (
-    <>
+    <tbody>
       {renderItem()}
-    </>
+    </tbody>
   )
 };
 

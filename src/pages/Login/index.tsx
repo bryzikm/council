@@ -1,15 +1,9 @@
-import React from "react";
-
-// TODO: transfer below components to correct view
-import Table from "../../components/Table";
-import { useNetwork } from "../../network";
+import React from 'react';
 
 const Login = () => {
-  const data = useNetwork();
-
   return (
     <div>
-      <Table data={data}/>
+      Login
     </div>
   )
 };
